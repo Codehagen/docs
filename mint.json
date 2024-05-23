@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Dingify",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
@@ -18,12 +18,12 @@
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:christer.hagen@gmail.com"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://dingify.io"
   },
   "tabs": [
     {
@@ -35,16 +35,16 @@
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "introduction"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
+      "name": "API Reference",
+      "icon": "square-terminal",
+      "url": "api-reference"
     },
     {
-      "name": "Blog",
-      "icon": "newspaper",
+      "name": "Knowledge Base",
+      "icon": "books",
       "url": "https://mintlify.com/blog"
     }
   ],
@@ -53,19 +53,20 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "quickstart",
         "development"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Quickstart",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "nodejs"
+      ]
+    },
+    {
+      "group": "Resources (Comming soon)",
+      "pages": [
+        "resourses/example",
+        "resourses/SDKs"
       ]
     },
     {
@@ -75,17 +76,17 @@
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Events",
       "pages": [
         "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/create"
       ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
-  }
+    "x": "https://x.com/codehagen",
+    "github": "https://github.com/codehagen/dingify",
+    "linkedin": "https://www.linkedin.com/"
+  },
+  "openapi": ["/openapi.yaml"]
 }

@@ -1,0 +1,157 @@
+---
+title: Node.js
+description: 'Learn how to receive your first notification with'
+---
+
+{/* <img
+  className="block dark:hidden"
+  src="/images/hero-light.svg"
+  alt="Hero Light"
+/>
+<img
+  className="hidden dark:block"
+  src="/images/hero-dark.svg"
+  alt="Hero Dark"
+/> */}
+
+<Info>
+  **Prerequisite** You need to have made an account on Dingify and have your API key ready.
+</Info>
+
+## Create a channel
+
+Channels are containers for events. Use one for payments, another for logins, etc.
+
+On the [Dashboard](https://dingify.io/dashboard) you can click create new channel and name it `new-payment`
+
+<Tip>Pro-tip: Keep your channel name simple </Tip>
+
+
+
+## Install SDK
+
+To get the most out of this guide, you’ll need to:
+
+{/* <CardGroup cols={2}>
+  <Card
+    title="Edit Your Docs"
+    icon="pen-to-square"
+    href="https://mintlify.com/docs/quickstart"
+  >
+    Get your docs set up locally for easy development
+  </Card>
+  <Card
+    title="Preview Changes"
+    icon="image"
+    href="https://mintlify.com/docs/development"
+  >
+    Preview your changes before you push to make sure they're perfect
+  </Card>
+</CardGroup> */}
+
+## 1. Install
+
+Get your Dingify SDK.
+
+<CodeGroup>
+
+```bash pnpm
+pnpm i dingify
+```
+
+```bash npm
+npm i dingify
+```
+
+```bash yarn
+yarn add dingify
+```
+
+</CodeGroup>
+
+## 2. Send your first notification
+
+Get your Dingify SDK.
+
+```typescript page.tsx
+import { Dingify } from "dingify";
+
+const dingify = new Dingify({
+    apiKey: "<YOUR_API_KEY_HERE>",
+});
+
+async function run() {
+    const result = await dingify.events.create({
+        name: "You got a new payment",
+        channel: "new-channel-name",
+        icon: "🎉",
+        notify: true,
+        tags: {
+            plan: "premium",
+            cycle: "monthly",
+        },
+    });
+
+    // Handle the result
+    console.log(result);
+}
+
+```
+
+## Try it yourself
+
+Now that you have everything, you can track your first event. You can do this by making a POST request to the API or by using the SDK.
+
+<CodeGroup>
+
+```javascript cURL
+curl -X POST https://api.dingify.workers.dev/api/events \
+-H "Content-Type: application/json" \
+-H "x-api-key: <API-KEY>" \
+-d '{
+  "channel": "new-channel-namex",
+  "name": "New-payment",
+  "event": "New-payment",
+  "user_id": "user-222",
+  "icon": "🤩",
+  "notify": true,
+  "tags": {
+    "plan": "premium",
+    "cycle": "monthly"
+  }
+}'
+
+```
+
+```typescript Node.js
+import { Dingify } from "dingify";
+
+const dingify = new Dingify({
+    apiKey: "<YOUR_API_KEY_HERE>",
+});
+
+async function run() {
+    const result = await dingify.events.create({
+        name: "You got a new payment",
+        channel: "new-channel-name",
+        icon: "🎉",
+        notify: true,
+        tags: {
+            plan: "premium",
+            cycle: "monthly",
+        },
+    });
+
+    // Handle the result
+    console.log(result);
+}
+```
+
+```java Python
+Comming soon
+```
+
+</CodeGroup>
+
+After making the request you will see the event tracked at Dingify dashboard.
+It will be under the channel you created.
