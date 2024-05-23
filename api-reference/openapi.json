@@ -122,11 +122,6 @@
             "description": "The ID of the user associated with the event.",
             "example": "user-999"
           },
-          "event": {
-            "type": "string",
-            "description": "The specific event being described.",
-            "example": "Tech Conference"
-          },
           "icon": {
             "type": "string",
             "description": "An optional icon for visual representation of the event.",
@@ -160,7 +155,6 @@
           "name",
           "channelId",
           "userId",
-          "event",
           "icon",
           "notify",
           "createdAt"
@@ -200,11 +194,6 @@
               "cycle": "monthly"
             }
           },
-          "event": {
-            "type": "string",
-            "description": "The specific event being described.",
-            "example": "Tech Conference"
-          },
           "user_id": {
             "type": "string",
             "description": "The ID of the user associated with the event.",
@@ -215,7 +204,6 @@
           "name",
           "channel",
           "notify",
-          "event",
           "user_id"
         ]
       },
