@@ -77,8 +77,8 @@
     {
       "group": "Events",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create"
+        "api-reference/events/get",
+        "api-reference/events/create"
       ]
     }
   ],
