@@ -52,8 +52,7 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "development"
+        "introduction"
       ]
     },
     {
@@ -66,7 +65,7 @@
       "group": "Resources (Comming soon)",
       "pages": [
         "resourses/example",
-        "resourses/SDKs"
+        "resourses/sdks"
       ]
     },
     {
