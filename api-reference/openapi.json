@@ -173,6 +173,11 @@
             "description": "The channel name where the event is registered.",
             "example": "new-channel-name"
           },
+          "user_id": {
+            "type": "string",
+            "description": "The ID of the user associated with the event.",
+            "example": "user-999"
+          },
           "icon": {
             "type": "string",
             "description": "An optional icon representing the event.",
@@ -193,11 +198,6 @@
               "plan": "premium",
               "cycle": "monthly"
             }
-          },
-          "user_id": {
-            "type": "string",
-            "description": "The ID of the user associated with the event.",
-            "example": "12345"
           }
         },
         "required": [
