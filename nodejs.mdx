@@ -80,20 +80,20 @@ const dingify = new Dingify({
     apiKey: "<YOUR_API_KEY_HERE>",
 });
 
-async function run() {
-    const result = await dingify.events.create({
-        name: "You got a new payment",
-        channel: "new-channel-name",
-        icon: "🎉",
-        notify: true,
-        tags: {
-            plan: "premium",
-            cycle: "monthly",
-        },
-    });
+  const result = await dingify.events.create({
+    name: "asd",
+    channel: "new-channel-name",
+    icon: "🎉",
+    userId: "user-123",
+    notify: true,
+    tags: {
+      plan: "premium",
+      cycle: "monthly",
+    },
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 
 ```
@@ -109,9 +109,9 @@ curl -X POST https://api.dingify.workers.dev/api/events \
 -H "Content-Type: application/json" \
 -H "x-api-key: <API-KEY>" \
 -d '{
-  "channel": "new-channel-namex",
+  "channel": "new-channel-name",
   "name": "New-payment",
-  "user_id": "user-222",
+  "userId": "user-123",
   "icon": "🤩",
   "notify": true,
   "tags": {
@@ -129,21 +129,22 @@ const dingify = new Dingify({
     apiKey: "<YOUR_API_KEY_HERE>",
 });
 
-async function run() {
-    const result = await dingify.events.create({
-        name: "You got a new payment",
-        channel: "new-channel-name",
-        icon: "🎉",
-        notify: true,
-        tags: {
-            plan: "premium",
-            cycle: "monthly",
-        },
-    });
+  const result = await dingify.events.create({
+    name: "asd",
+    channel: "new-channel-name",
+    icon: "🎉",
+    userId: "user-123",
+    notify: true,
+    tags: {
+      plan: "premium",
+      cycle: "monthly",
+    },
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
+
 ```
 
 ```java Python

@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.1.0",
   "info": {
     "title": "Dingify Event Management",
     "description": "API for managing users, their events, and projects.",
@@ -42,7 +42,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Event"
+                  "$ref": "#/components/schemas/EventResponse"
                 }
               }
             }
@@ -99,6 +99,22 @@
   },
   "components": {
     "schemas": {
+      "EventResponse": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "type": "boolean",
+            "example": true
+          },
+          "message": {
+            "type": "string",
+            "example": "Event logged!"
+          },
+          "event": {
+            "$ref": "#/components/schemas/Event"
+          }
+        }
+      },
       "Event": {
         "type": "object",
         "properties": {
@@ -110,12 +126,12 @@
           "name": {
             "type": "string",
             "description": "The name of the event.",
-            "example": "Annual Meetup"
+            "example": "You got a new payment"
           },
           "channelId": {
             "type": "string",
             "description": "The ID of the channel associated with the event.",
-            "example": "clwg03hiz0003zmo55xu8xujb"
+            "example": "new-channel-name"
           },
           "userId": {
             "type": "string",
@@ -173,7 +189,7 @@
             "description": "The channel name where the event is registered.",
             "example": "new-channel-name"
           },
-          "user_id": {
+          "userId": {
             "type": "string",
             "description": "The ID of the user associated with the event.",
             "example": "user-999"
@@ -204,7 +220,7 @@
           "name",
           "channel",
           "notify",
-          "user_id"
+          "userId"
         ]
       },
       "EventsResponse": {
